@@ -1,0 +1,33 @@
+<div class="container-sm p-5">
+    <div class="row align-items-center">
+      <div class="col">
+        <img src="../../../assets/img/login-image.jpeg"/>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="s12 m4 l8 ">
+            <h2 class="header">Acceder</h2>           
+              <form>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" #user="ngModel" maxlength="15" name="usuario"
+                    [(ngModel)]="cedula" placeholder="Documento de Identidad" required>
+                  <label for="floatingInput">Documento Identidad</label>
+                  <div *ngIf="user.invalid && (user.dirty || user.touched)">
+                    <div id="emailHelp" class="form-text">Recuerda que es el documento de identidad</div>
+                  </div>
+                </div>
+                <div class="form-floating">
+                  <input type="password" class="form-control" maxlength="50" id="floatingPassword" name="password"
+                    [(ngModel)]="contrasena" placeholder="Contraseña">
+                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                </div>
+                <br>
+                
+                  <button type="submit" class="btn btn-primary" (click)="login()">Ingresar</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    <div>
+  </div>
+  
